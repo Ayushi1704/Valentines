@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For Every Mood 🍭</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff0f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .candy {
+      padding: 25px 10px;
+      border-radius: 50px;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    .c1 { background: #ff6f91; }
+    .c2 { background: #ff9671; }
+    .c3 { background: #ffc75f; }
+    .c4 { background: #f9f871; color: #444; }
+    .c5 { background: #b39ddb; }
+    .c6 { background: #7ec8e3; }
+    .c7 { background: #ff9aa2; }
+    .c8 { background: #caffbf; color: #444; }
+    .c9 { background: #fdffb6; color: #444; }
+  </style>
+</head>
+<body>
+
+  <h1>Pick a candy 🍬</h1>
+
+  <div class="grid">
+    <div class="candy c1" onclick="go('candy1.html')">100 reasons I love you</div>
+    <div class="candy c2" onclick="go('candy2.html')">Read when you are sad</div>
+    <div class="candy c3" onclick="go('candy3.html')">Read if you miss me</div>
+    <div class="candy c4" onclick="go('candy4.html')">When you doubt yourself</div>
+    <div class="candy c5" onclick="go('candy5.html')">When you’re stressed</div>
+    <div class="candy c6" onclick="go('candy6.html')">If you feel confused</div>
+    <div class="candy c7" onclick="go('candy7.html')">My promises to you</div>
+    <div class="candy c8" onclick="go('candy8.html')">My favourite things about you</div>
+    <div class="candy c9" onclick="go('candy9.html')">My favourite memories</div>
+  </div>
+
+  <script>
+    function go(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>
