@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You 💌</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #ffb6c1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .envelope {
+      width: 220px;
+      height: 140px;
+      background: white;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 110px solid transparent;
+      border-right: 110px solid transparent;
+      border-bottom: 70px solid #f2f2f2;
+      transform-origin: top;
+      transition: transform 0.6s;
+    }
+
+    .letter {
+      display: none;
+      position: absolute;
+      top: -180px;
+      width: 300px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .letter button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 20px;
+      background: #ff69b4;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="envelope" onclick="openEnvelope()">
+    <div class="flap" id="flap"></div>
+
+    <div class="letter" id="letter">
+      <p>
+        Happy Valentine's Day my love.  
+        This year I didn't want to risk giving you physical gifts but still wanted it to be something special.  
+        So I hope I've not done too bad of a job here 💗
+      </p>
+
+      <button onclick="goNext(event)">Next 💕</button>
+    </div>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById("flap").style.transform = "rotateX(180deg)";
+      document.getElementById("letter").style.display = "block";
+    }
+
+    function goNext(e) {
+      e.stopPropagation();
+      window.location.href = "candies.html";
+    }
+  </script>
+
+</body>
+</html>
